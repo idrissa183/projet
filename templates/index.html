@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>healthcheck</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='css/style.css') }}">
+</head>
+<body>
+    <h1>Bienvenue sur mon site!</h1>
+
+    <form method="post" action="traitement.php">
+
+        <div>
+            <p><label for="nom">Nom</label></p>
+            <p><input type="text" name="nom" placeholder="Entrer votre nom" id="nom" size="30" maxlength="100"></p>
+        </div>
+
+        <!--champ prenom-->
+        <div>
+            <p><label for="prenom">Prenom</label></p>
+            <p><input type="text" name="prenom" placeholder="Entrer votre prenom" id="prenom" size="30" maxlength="200"></p>
+        </div>
+
+        <!--champ age-->
+        <div>
+            <p><label for="age">Age</label></p>
+            <p><input type="number" name="age" placeholder="Entrer votre age" id="age" size="30" maxlength="3" min="1" step="1" max="100"></p>
+        </div>
+
+        <!--champ email-->
+        <div>
+            <p><label for="email">Email</label></p>
+            <p><input type="email" name="nom" placeholder="Entrer votre email" id="email" size="30" maxlength="100"></p>
+        </div>
+
+        <!--champ password-->
+        <div>
+            <p><label for="password">Password</label></p>
+            <p><input type="password" name="password" placeholder="Entrer votre mot de passe" id="password" size="30" maxlength="8"></p>
+        </div>
+
+        <!--!champ confirm-->
+        <div>
+            <p><label for="confirmer">Confirmer</label></p>
+            <p><input type="password" name="password" placeholder="Confirmer votre mot de passe" id="confirmer" size="30" maxlength="8"></p>
+        </div>
+
+        <!--!champ verification-->
+        <div>
+            <p><label>Check</label></p>
+            <p><input type="number" name="check" size="30" min="0" step="1" max="1"></p>
+        </div>
+
+        <!--button verification-->
+        <button type="submit">Envoyer</button>
+    </form>
+</body>
+</html>

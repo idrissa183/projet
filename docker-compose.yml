@@ -1,0 +1,22 @@
+#version du docker compose
+version: '3'
+services:
+  #conteneur database
+  db:
+    image: mysql:5.7
+    container_name: patient_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: healthcheck
+    ports:
+      - "3306:3306"
+    volumes:
+      -
+
+  web:
+    build: .
+    command: sh -c "uvicorn app.models:app --reload --port=8000 --host=0.0.0.0"
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
